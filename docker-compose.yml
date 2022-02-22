@@ -1,0 +1,24 @@
+version: "3"
+services:
+  composer:
+    build: .
+    ports:
+      - "3000:3000"
+      # - "3979-5000:3979-5000"
+    volumes:
+      - ~/Documents/Composer:/Bots
+      - ./runtime:/runtime
+      - ./.appdata:/appdata
+      - ./extensions/localPublish/hostedBots:/app/extensions/localPublish/hostedBots
+    env_file:
+      - .env
+    depends_on:
+      - mongo
+  mongo:
+    image: mongo:4.4
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=composer
+      - MONGO_INITDB_ROOT_PASSWORD=composer
+      - MONGO_INITDB_DATABASE=composer
+    ports:
+      - 27020:27017

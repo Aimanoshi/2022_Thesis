@@ -1,0 +1,19 @@
+{
+  "name": "webroute",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/extension.js",
+  "scripts": {
+    "build": "node ../scripts/build.js",
+    "watch": "yarn build --watch"
+  },
+  "composer": {
+    "enabled": false
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^5.4.0",
+    "webpack-cli": "^4.2.0"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "name": "@bfc/form-dialogs",
+  "version": "0.0.1",
+  "license": "MIT",
+  "author": "Microsoft",
+  "description": "Form Dialog components for Bot Framework Composer",
+  "main": "./lib/index.js",
+  "typings": "./lib/FormDialogSchemaEditor.d.ts",
+  "files": [
+    "lib/*index*",
+    "lib/FormDialogSchemaEditor.d.ts"
+  ],
+  "scripts": {
+    "clean": "rimraf lib dist",
+    "start": "node tools/devServer.js",
+    "build": "yarn clean && yarn build:ts",
+    "build:ts": "tsc --build ./tsconfig.lib.json",
+    "watch": "yarn build:ts --watch",
+    "lint": "eslint --quiet ./src",
+    "lint:fix": "yarn lint --fix"
+  },
+  "dependencies": {
+    "react-beautiful-dnd": "^13.0.0",
+    "@bfc/shared": "*",
+    "@bfc/ui-shared": "*"
+  },
+  "peerDependencies": {
+    "recoil": "^0.0.13",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "lodash": "^4.17.19",
+    "format-message": "^6.2.3",
+    "office-ui-fabric-react": "^7.121.11",
+    "@emotion/core": "^10.0.27",
+    "@emotion/styled": "^10.0.27",
+    "@uifabric/fluent-theme": "^7.1.107",
+    "@uifabric/react-hooks": "^7.4.12"
+  },
+  "devDependencies": {
+    "@types/react": "^16.8.18",
+    "@types/react-beautiful-dnd": "^13.0.0",
+    "@types/react-dom": "^16.8.4",
+    "@types/lodash": "^4.14.146",
+    "@types/recoil": "^0.0.1",
+    "rimraf": "^2.6.3"
+  }
+}

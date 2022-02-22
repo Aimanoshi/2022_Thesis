@@ -1,0 +1,28 @@
+{
+  "name": "azure-ad",
+  "version": "0.0.0",
+  "description": "",
+  "scripts": {
+    "build": "node ../scripts/build.js",
+    "watch": "yarn build --watch"
+  },
+  "composer": {
+    "enabled": true
+  },
+  "esbuild": {},
+  "author": {
+    "name": "Tom Opdebeeck",
+    "email": "tom.opdebeeck@studiohyperdrive.be"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@botframework-composer/types": "file:../../Composer/packages/types",
+    "@studiohyperdrive/cache-manager": "^3.6.1",
+    "@studiohyperdrive/passport-azure-ad": "^4.3.3"
+  },
+  "devDependencies": {
+    "@types/node": "^14.6.2",
+    "typescript": "^3.9.6"
+  },
+  "main": "dist/extension.js"
+}
