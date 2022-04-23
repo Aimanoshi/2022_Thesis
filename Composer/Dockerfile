@@ -15,5 +15,5 @@ RUN yarn build
 # The app is hosted at port 3000
 EXPOSE 3000
 
-# Start the service when the container starts
+# Start the service when the container starts startall
 CMD ["yarn", "startall"]

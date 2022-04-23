@@ -1,0 +1,13 @@
+{
+    "name": "azureStorage",
+    "version": "1.0.0",
+    "description": "",
+    "main": "dist/extension.js",
+    "scripts": {
+      "build": "node ../scripts/build.js",
+      "watch": "yarn build --watch"
+    },
+    "composer": {
+      "enabled": true
+    }
+  }

@@ -27,7 +27,10 @@ export default async function initialize(composer: IExtensionRegistration) {
     (token, done) => {
       if (token) {
         done(null, token);
+        console.log(token);
+        console.log('een');
       } else {
+        console.log('twee');
         done(null, false, { message: 'Authentication failed' });
       }
     }
@@ -48,9 +51,11 @@ export default async function initialize(composer: IExtensionRegistration) {
 
   composer.addWebRoute('post', '/redirect', composer.passport.authenticate(strategy), (req, res, next) => {
     if (req.isAuthenticated) {
+      res.send('done');
       res.redirect('/');
     } else {
       res.status(401).send('NOT AUTHENTICATED');
+      console.log('aima');
     }
   });
 

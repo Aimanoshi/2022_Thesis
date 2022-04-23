@@ -189,7 +189,7 @@ const Home: React.FC<RouteComponentProps> = () => {
                   src={noRecentBotsCover}
                 />
                 <div css={home.noRecentBotsDescription}>
-                  {formatMessage.rich('<Link>Create a new bot to get started</Link>', {
+                  {formatMessage.rich('<Link></Link>', {
                     Link: ({ children }) => (
                       <Link
                         key="create-new-bot-link"
@@ -206,7 +206,7 @@ const Home: React.FC<RouteComponentProps> = () => {
               </div>
             )}
           </div>
-          <div css={home.resourcesContainer}>
+          {/* <div css={home.resourcesContainer}>
             <h2 css={home.subtitle}>{formatMessage('Resources')}&nbsp;</h2>
             <div css={home.rowContainer}>
               {resources.map((item, index) => (
@@ -223,7 +223,7 @@ const Home: React.FC<RouteComponentProps> = () => {
                 />
               ))}
             </div>
-          </div>
+          </div> */}
           <div css={home.videosContainer}>
             <div css={home.rowContainer}>
               <Pivot aria-label="Videos and articles" css={home.pivotContainer} linkSize={PivotLinkSize.large}>

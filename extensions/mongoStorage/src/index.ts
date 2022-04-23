@@ -50,6 +50,8 @@ class MongoStorage implements IFileStorage {
     // TODO: make the connect string and options pull from the connection
     conn;
 
+    console.log(conn);
+
     if (!MongoStorage.db) {
       mongoose.connect(MONGODB_URI, {});
       MongoStorage.db = mongoose.connection;
